@@ -1,0 +1,45 @@
+.fs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--fs-radius-md);
+  border: none;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.fs-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.fs-btn-primary {
+  background: var(--fs-accent);
+  color: #fff;
+}
+
+.fs-btn-primary:hover:not(:disabled) {
+  background: #5558e6;
+}
+
+.fs-btn-secondary {
+  background: var(--fs-bg-elevated);
+  color: var(--fs-text-primary);
+  border: 1px solid var(--fs-border-default);
+}
+
+.fs-btn-secondary:hover:not(:disabled) {
+  background: var(--fs-bg-hover);
+  border-color: var(--fs-border-strong);
+}
+
+.fs-btn-ghost {
+  background: transparent;
+  color: var(--fs-text-secondary);
+}
+
+.fs-btn-ghost:hover:not(:disabled) {
+  background: var(--fs-bg-hover);
+  color: var(--fs-text-primary);
+}

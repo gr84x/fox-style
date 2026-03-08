@@ -1,0 +1,10 @@
+.fs-mode-banner {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--fs-text-tertiary);
+  background: var(--fs-bg-active);
+  padding: 2px 8px;
+  border-radius: var(--fs-radius-full);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}

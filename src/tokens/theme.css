@@ -1,0 +1,147 @@
+/* ============================================================
+   @gr84x/fox-style — Design tokens and base theme
+   Dark-first, mobile-friendly. Import once in your app root.
+   ============================================================ */
+
+:root {
+  --fs-bg-primary: #0c0c0c;
+  --fs-bg-surface: #141414;
+  --fs-bg-elevated: #1a1a1a;
+  --fs-bg-hover: #1f1f1f;
+  --fs-bg-active: #252525;
+
+  --fs-text-primary: #ececec;
+  --fs-text-secondary: #8a8a8a;
+  --fs-text-tertiary: #5a5a5a;
+
+  --fs-border-subtle: #1e1e1e;
+  --fs-border-default: #2a2a2a;
+  --fs-border-strong: #333333;
+
+  --fs-accent: #6366f1;
+  --fs-accent-muted: rgba(99, 102, 241, 0.15);
+  --fs-accent-text: #818cf8;
+
+  --fs-success: #22c55e;
+  --fs-success-muted: rgba(34, 197, 94, 0.12);
+  --fs-warning: #eab308;
+  --fs-warning-muted: rgba(234, 179, 8, 0.12);
+  --fs-danger: #ef4444;
+  --fs-danger-muted: rgba(239, 68, 68, 0.12);
+
+  --fs-radius-sm: 6px;
+  --fs-radius-md: 10px;
+  --fs-radius-lg: 14px;
+  --fs-radius-xl: 18px;
+  --fs-radius-full: 9999px;
+
+  --fs-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --fs-font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  --fs-sidebar-width: 320px;
+  --fs-nav-tray-width: 52px;
+
+  /* Aliases for consumers that expect unprefixed names (optional) */
+  --bg-primary: var(--fs-bg-primary);
+  --bg-surface: var(--fs-bg-surface);
+  --bg-elevated: var(--fs-bg-elevated);
+  --bg-hover: var(--fs-bg-hover);
+  --bg-active: var(--fs-bg-active);
+  --text-primary: var(--fs-text-primary);
+  --text-secondary: var(--fs-text-secondary);
+  --text-tertiary: var(--fs-text-tertiary);
+  --border-subtle: var(--fs-border-subtle);
+  --border-default: var(--fs-border-default);
+  --border-strong: var(--fs-border-strong);
+  --accent: var(--fs-accent);
+  --accent-muted: var(--fs-accent-muted);
+  --accent-text: var(--fs-accent-text);
+  --success: var(--fs-success);
+  --warning: var(--fs-warning);
+  --danger: var(--fs-danger);
+  --radius-sm: var(--fs-radius-sm);
+  --radius-md: var(--fs-radius-md);
+  --radius-lg: var(--fs-radius-lg);
+  --radius-full: var(--fs-radius-full);
+  --font-sans: var(--fs-font-sans);
+  --font-mono: var(--fs-font-mono);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--fs-font-sans);
+  background: var(--fs-bg-primary);
+  color: var(--fs-text-primary);
+  line-height: 1.55;
+}
+
+:focus-visible {
+  outline: 2px solid var(--fs-accent);
+  outline-offset: 2px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fs-border-default);
+  border-radius: var(--fs-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fs-border-strong);
+}
+
+@keyframes fs-fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fs-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

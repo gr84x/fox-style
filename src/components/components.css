@@ -1,0 +1,53 @@
+/* @gr84x/fox-style — Component styles. Import after theme.css. */
+
+.fs-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--fs-radius-sm);
+  white-space: nowrap;
+}
+.fs-badge-default { color: var(--fs-text-tertiary); background: var(--fs-bg-active); }
+.fs-badge-success { color: var(--fs-success); background: var(--fs-success-muted); }
+.fs-badge-warning { color: var(--fs-warning); background: var(--fs-warning-muted); }
+.fs-badge-danger { color: var(--fs-danger); background: var(--fs-danger-muted); }
+.fs-badge-accent { color: var(--fs-accent-text); background: var(--fs-accent-muted); }
+
+.fs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--fs-radius-md);
+  border: none;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.fs-btn:active:not(:disabled) { transform: scale(0.98); }
+.fs-btn-primary { background: var(--fs-accent); color: #fff; }
+.fs-btn-primary:hover:not(:disabled) { background: #5558e6; }
+.fs-btn-secondary {
+  background: var(--fs-bg-elevated);
+  color: var(--fs-text-primary);
+  border: 1px solid var(--fs-border-default);
+}
+.fs-btn-secondary:hover:not(:disabled) {
+  background: var(--fs-bg-hover);
+  border-color: var(--fs-border-strong);
+}
+.fs-btn-ghost { background: transparent; color: var(--fs-text-secondary); }
+.fs-btn-ghost:hover:not(:disabled) { background: var(--fs-bg-hover); color: var(--fs-text-primary); }
+
+.fs-mode-banner {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--fs-text-tertiary);
+  background: var(--fs-bg-active);
+  padding: 2px 8px;
+  border-radius: var(--fs-radius-full);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}

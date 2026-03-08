@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Introduction" />
+
+# Fox Style — Design System
+
+**@gr84x/fox-style** is a reusable component library and design tokens for Fox family UIs. Dark-first theme, React components, and a living style guide (this Storybook).
+
+## Quick start
+
+```bash
+npm install @gr84x/fox-style react react-dom
+```
+
+In your app root (e.g. `main.tsx` or `App.tsx`), import the theme and component styles once:
+
+```ts
+import '@gr84x/fox-style/theme.css'
+import '@gr84x/fox-style/components.css'
+```
+
+Then use components:
+
+```tsx
+import { Badge, Button, ModeBanner } from '@gr84x/fox-style'
+
+export function App() {
+  return (
+    <div>
+      <ModeBanner visible={true} label="Demo" />
+      <Button variant="primary">Submit</Button>
+      <Badge variant="success">Done</Badge>
+    </div>
+  )
+}
+```
+
+## Design tokens
+
+- **Colors**: Background scale (primary, surface, elevated, hover, active), text (primary, secondary, tertiary), border, accent, semantic (success, warning, danger).
+- **Radius**: sm (6px), md (10px), lg (14px), xl (18px), full.
+- **Typography**: `--fs-font-sans`, `--fs-font-mono`.
+- **Layout**: `--fs-sidebar-width`, `--fs-nav-tray-width`.
+
+All tokens use the `--fs-*` prefix in CSS. See the **Components** section for usage and stories.
+
+## Accessibility
+
+- Focus visible outline uses the accent color.
+- Reduced motion is respected via `prefers-reduced-motion`.
+- Components expose appropriate ARIA attributes where needed.

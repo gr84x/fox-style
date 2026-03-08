@@ -1,0 +1,34 @@
+.fs-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: var(--fs-radius-sm);
+  white-space: nowrap;
+}
+
+.fs-badge-default {
+  color: var(--fs-text-tertiary);
+  background: var(--fs-bg-active);
+}
+
+.fs-badge-success {
+  color: var(--fs-success);
+  background: var(--fs-success-muted);
+}
+
+.fs-badge-warning {
+  color: var(--fs-warning);
+  background: var(--fs-warning-muted);
+}
+
+.fs-badge-danger {
+  color: var(--fs-danger);
+  background: var(--fs-danger-muted);
+}
+
+.fs-badge-accent {
+  color: var(--fs-accent-text);
+  background: var(--fs-accent-muted);
+}
