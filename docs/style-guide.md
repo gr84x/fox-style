@@ -46,6 +46,14 @@ Design tokens and component usage for **@gr84x/fox-style**. For a living preview
 - **Badge** — Small status or label pill. Variants: default, success, warning, danger, accent.
 - **Button** — Primary, secondary, ghost. Use for actions.
 - **ModeBanner** — Optional pill (e.g. "Demo", "Beta"). Renders only when `visible` is true.
+- **Card** — Container with optional padding. Use for panels and content blocks.
+- **Layout** — App shell: optional NavTray + sidebar slot + main content. Handles responsive visibility (e.g. sidebar vs main on mobile).
+- **Loader** — Animated 9-cell loading indicator. Animations: binary, gray-code, ripple, sparkle, fill-drain, life (Conway), wave. Layouts: grid (3×3) or row (9×1). Optional label, inline mode.
+- **NavTray** — Narrow vertical icon bar. Pass `items` (id, label, icon), `activeId`, `onNavigate`. Icon options: no built-in set; pass any ReactNode (e.g. inline SVG with currentColor, or an icon library component). Recommended icon size 20×20.
+- **ProgressBar** — Linear progress (0–100). Optional label, `successAtFull` for green at 100%.
+- **SearchInput** — Controlled search field with icon. Use for filters and search.
+- **SegmentedControl** — Tab-like segment buttons. Pass `options` (value, label), `value`, `onChange`.
+- **StatusDot** — Small colored dot. Variants: default, success, warning, danger, accent. Optional `pulse`.
 
 See Storybook for props, examples, and do’s and don’ts.
 

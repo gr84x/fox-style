@@ -28,6 +28,10 @@ import { Badge, Button, ModeBanner } from '@gr84x/fox-style'
 <ModeBanner visible={true} label="Demo" />
 <Button variant="primary">Submit</Button>
 <Badge variant="success">Done</Badge>
+<Loader label="Loading" />
+<SearchInput value={query} onChange={setQuery} placeholder="Search…" />
+<StatusDot variant="accent" pulse />
+<ProgressBar value={60} label="Planning" />
 ```
 
 ## Configuration
