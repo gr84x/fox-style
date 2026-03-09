@@ -10,7 +10,7 @@ const options = [
 ] as const
 
 const meta: Meta<typeof SegmentedControl> = {
-  title: 'Components/SegmentedControl',
+  title: 'Components/Forms/SegmentedControl',
   component: SegmentedControl,
   tags: ['autodocs'],
 }

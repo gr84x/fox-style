@@ -1,0 +1,50 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Documentation/Design Tokens" />
+
+# Design Tokens
+
+@gr84x/fox-style uses CSS custom properties (variables) with the **`--fs-*`** prefix. All tokens are defined in `theme.css` and optionally referenced via the `tokens` export in JS.
+
+For a **visual showcase** (color swatches, type scale, spacing, radius), see **Foundation / Tokens** in the sidebar.
+
+## Token reference
+
+### Color
+
+| Token | CSS variable | Use |
+|-------|--------------|-----|
+| Background primary | `--fs-bg-primary` | Page background |
+| Background surface | `--fs-bg-surface` | Cards, sidebars |
+| Background elevated | `--fs-bg-elevated` | Inputs, raised panels |
+| Background hover | `--fs-bg-hover` | Hover state |
+| Background active | `--fs-bg-active` | Selected/active |
+| Text primary | `--fs-text-primary` | Body text |
+| Text secondary | `--fs-text-secondary` | Secondary text |
+| Text tertiary | `--fs-text-tertiary` | Muted, hints |
+| Border subtle / default / strong | `--fs-border-subtle`, `--fs-border-default`, `--fs-border-strong` | Dividers, inputs |
+| Accent | `--fs-accent`, `--fs-accent-muted`, `--fs-accent-text` | CTAs, links |
+| Success / Warning / Danger | `--fs-success`, `--fs-warning`, `--fs-danger` (+ muted) | Status |
+
+### Typography
+
+- **Sans:** `--fs-font-sans` — UI and body.
+- **Mono:** `--fs-font-mono` — Code, IDs.
+
+### Radius
+
+- `--fs-radius-sm` (6px), `--fs-radius-md` (10px), `--fs-radius-lg` (14px), `--fs-radius-xl` (18px), `--fs-radius-full` (pill).
+
+### Layout
+
+- `--fs-sidebar-width` (320px), `--fs-nav-tray-width` (52px).
+
+### Using tokens in your CSS
+
+```css
+.my-panel {
+  background: var(--fs-bg-surface);
+  border-radius: var(--fs-radius-md);
+  color: var(--fs-text-primary);
+}
+```

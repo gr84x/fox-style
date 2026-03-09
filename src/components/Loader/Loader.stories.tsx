@@ -4,7 +4,7 @@ import { Loader } from './Loader'
 const allAnimations = ['binary', 'gray-code', 'ripple', 'sparkle', 'fill-drain', 'life', 'wave'] as const
 
 const meta: Meta<typeof Loader> = {
-  title: 'Components/Loader',
+  title: 'Components/Feedback/Loader',
   component: Loader,
   tags: ['autodocs'],
   argTypes: {

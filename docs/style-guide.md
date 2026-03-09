@@ -1,6 +1,6 @@
 # Fox Style — Style Guide
 
-Design tokens and component usage for **@gr84x/fox-style**. For a living preview, run `npm run storybook`.
+Design tokens and component usage for **@gr84x/fox-style**. For a visual token reference and component demos, run `npm run storybook` and see **Foundation / Tokens** and **Components**.
 
 ## Overview
 
@@ -54,8 +54,40 @@ Design tokens and component usage for **@gr84x/fox-style**. For a living preview
 - **SearchInput** — Controlled search field with icon. Use for filters and search.
 - **SegmentedControl** — Tab-like segment buttons. Pass `options` (value, label), `value`, `onChange`.
 - **StatusDot** — Small colored dot. Variants: default, success, warning, danger, accent. Optional `pulse`.
+- **ChatInput** — Message input with auto-resize textarea and send button. Optional hint. Use in chat UIs.
+- **PhaseDivider** — Horizontal divider with centered chip label. Use for phase or section breaks.
+- **SystemStatus** — Status block: info, success, warning, error. Optional detail and timestamp.
+- **Accordion** — Expand/collapse sections. Purpose: only one (or a few) sections visible at a time. Use cases: FAQs, settings groups, filters/options panels, terms and conditions, multi-section forms.
+- **FormField** — Label, control slot, hint, error. Use to wrap Input, Select, Checkbox, etc.
+- **Input** — Text input; supports error state and className.
+- **ImageUpload** — File input for images with preview and clear.
+- **Checkbox** — Single checkbox with label; supports indeterminate.
+- **RadioGroup / Radio** — Group of radio options.
+- **Select** — Native select with options; supports FormField.
+- **Slider** — Range input with token-styled track and thumb.
+- **Link** — Text link using accent tokens; supports disabled.
+- **Tooltip** — Positioned tooltip (e.g. top, bottom).
+- **Popover** — Positioned floating panel.
+- **Modal** — Dialog using native `<dialog>`; optional title and actions.
+- **Drawer** — Slide-out panel (left/right); overlay and backdrop.
+- **ToastProvider / useToast** — Toast notifications; configurable position and variants.
+- **Menu** — Dropdown menu panel with items (optional icon, disabled).
+- **Tabs, TabList, Tab, TabPanel** — Tabbed content.
+- **Breadcrumbs** — Breadcrumb trail with links and current.
+- **Pagination** — Page navigation buttons.
+- **Table** — Data table with optional sortable headers and row click.
+- **Avatar** — Circle avatar (image, initials, or icon); sizes sm/md/lg.
+- **Skeleton** — Loading placeholder (text, circle, rect).
+- **Divider** — Horizontal or vertical divider; optional label and spacing.
+- **Typography (Heading, Text, Code)** — Heading levels, body text variants, inline code.
 
 See Storybook for props, examples, and do’s and don’ts.
+
+Components are grouped in Storybook as: **Actions**; **Feedback**; **Forms**; **Layout**; **Navigation**; **Data**; **Typography**. See the Storybook sidebar for the full list in each category.
+
+## Storybook
+
+Run `npm run storybook`. Sidebar: **Documentation** (Introduction, Get Started, Design Tokens, Contribution, Changelog, Recipes); **Foundation** (Tokens visual showcase); **Components** by role. **Recipes** show composition patterns: Header bar, Filter row, Task row, App shell.
 
 ## Layout (reference)
 

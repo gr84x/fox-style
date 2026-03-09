@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ModeBanner } from './ModeBanner'
 
 const meta: Meta<typeof ModeBanner> = {
-  title: 'Components/ModeBanner',
+  title: 'Components/Feedback/ModeBanner',
   component: ModeBanner,
   tags: ['autodocs'],
   argTypes: {

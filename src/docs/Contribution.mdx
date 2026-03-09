@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Documentation/Contribution" />
+
+# Contribution
+
+Contributions to **@gr84x/fox-style** are welcome. This page summarizes how to run the project and add or change components.
+
+## Environment
+
+- Node.js 18+
+- npm
+
+```bash
+git clone https://github.com/gr84x/fox-style.git
+cd fox-style
+npm install
+```
+
+## Run Storybook
+
+```bash
+npm run storybook
+```
+
+Opens the design system at http://localhost:6006. Use it to verify components and docs.
+
+## Build the package
+
+```bash
+npm run build
+```
+
+Output is in `dist/` (TypeScript and copied CSS). Consumers import from the package entry and the exported CSS paths.
+
+## Adding a component
+
+1. **Create the component** under `src/components/<Name>/`:
+   - `<Name>.tsx` — React component (use `fs-*` class names).
+   - `index.ts` — Re-export component and types.
+   - Optionally `<Name>.css`; if so, add the same styles to `src/components/components.css` so the library ships one component stylesheet.
+
+2. **Add styles** to `src/components/components.css` using design tokens (`var(--fs-*)`). Do not add app-specific or layout-only classes here; keep them in the consuming app.
+
+3. **Export** from `src/index.ts`.
+
+4. **Add a Storybook story** under the appropriate section (e.g. `Components/Feedback/<Name>`) in `src/components/<Name>/<Name>.stories.tsx`.
+
+5. **Update docs**: `docs/style-guide.md` and README component list.
+
+## Code and commit conventions
+
+- Follow existing patterns (tokens, `fs-` prefix, peer React).
+- TypeScript strict; no `@/` or app-specific imports in the library.
+- Commit format: see the repository [README](https://github.com/gr84x/fox-style#readme) or CONTRIBUTING if present.
+
+## Reporting issues
+
+Open an issue on GitHub: [gr84x/fox-style](https://github.com/gr84x/fox-style/issues).

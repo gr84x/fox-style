@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Documentation/Get Started" />
+
+# Get Started
+
+Use **@gr84x/fox-style** in your React app in three steps.
+
+## 1. Install
+
+```bash
+npm install @gr84x/fox-style react react-dom
+```
+
+Peer dependencies: `react` and `react-dom` (>=18). Your app supplies them.
+
+## 2. Load styles
+
+In your app root (e.g. `main.tsx` or `App.tsx`), import the theme and component styles **once**:
+
+```ts
+import '@gr84x/fox-style/theme.css'
+import '@gr84x/fox-style/components.css'
+```
+
+Order matters: load `theme.css` first (tokens and base), then `components.css` (component classes).
+
+## 3. Use components
+
+```tsx
+import { Badge, Button, ModeBanner } from '@gr84x/fox-style'
+
+export function App() {
+  return (
+    <div>
+      <ModeBanner visible={true} label="Demo" />
+      <Button variant="primary">Submit</Button>
+      <Badge variant="success">Done</Badge>
+    </div>
+  )
+}
+```
+
+## Next steps
+
+- Browse **Foundation / Tokens** in this Storybook for colors, typography, and spacing.
+- Browse **Components** by category (Actions, Feedback, Forms, Layout, Navigation) for props and examples.
+- See the [README](https://github.com/gr84x/fox-style#readme) for configuration and usage details.

@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
 ]
 
 const meta: Meta<typeof Layout> = {
-  title: 'Components/Layout',
+  title: 'Components/Layout/Layout',
   component: Layout,
   tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },
@@ -66,6 +66,32 @@ export const SidebarOnly: Story = {
         sidebar={<div style={{ padding: 16 }}>Sidebar only (no nav tray)</div>}
       >
         <div style={{ padding: 24 }}>Main area</div>
+      </Layout>
+    )
+  },
+}
+
+export const MainOnly: Story = {
+  render: function Render() {
+    return (
+      <Layout>
+        <div style={{ padding: 24 }}>Main content only. No tray, no sidebar.</div>
+      </Layout>
+    )
+  },
+}
+
+export const TrayAndMain: Story = {
+  render: function Render() {
+    const [activeNav, setActiveNav] = useState('orchestrator')
+    return (
+      <Layout
+        navItems={navItems}
+        activeNavId={activeNav}
+        onNavigate={setActiveNav}
+        showNavTray={true}
+      >
+        <div style={{ padding: 24 }}>Tray + main. No sidebar. Nav: {activeNav}.</div>
       </Layout>
     )
   },

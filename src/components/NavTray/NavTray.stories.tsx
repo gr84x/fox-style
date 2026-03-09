@@ -66,7 +66,7 @@ const itemsWithIcons: NavItem[] = [
 ]
 
 const meta: Meta<typeof NavTray> = {
-  title: 'Components/NavTray',
+  title: 'Components/Navigation/NavTray',
   component: NavTray,
   tags: ['autodocs'],
   parameters: {

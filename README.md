@@ -58,8 +58,9 @@ export function Header({ isDemo }: { isDemo: boolean }) {
 
 ## Status & compatibility
 
-- **Status:** Pre-alpha. Initial tokens and a small set of components (Badge, Button, ModeBanner). More components will be added as they are extracted from fox-orchestrator.
+- **Status:** Pre-alpha. Design tokens and 35+ components: Actions (Button), Feedback (Badge, Loader, ModeBanner, ProgressBar, StatusDot, SystemStatus, Tooltip, Modal, Drawer, Popover, Toast, Skeleton), Forms (SearchInput, SegmentedControl, FormField, Input, Checkbox, RadioGroup, Select, Slider, ChatInput, ImageUpload), Layout (Card, Layout, Divider, Accordion), Navigation (NavTray, Link, Breadcrumbs, Pagination, Menu, Tabs), Data (Table, Avatar), Typography (Heading, Text, Code). Documentation and Foundation in Storybook.
 - **Compatibility:** React 18+, modern browsers. Built as ESM.
+- **Changelog:** [CHANGELOG.md](CHANGELOG.md) or [Releases](https://github.com/gr84x/fox-style/releases).
 
 ## Architecture
 
@@ -76,7 +77,13 @@ npm install
 npm run storybook
 ```
 
-Open http://localhost:6006. Build a static version:
+Open http://localhost:6006. The sidebar is organized as:
+
+- **Documentation** — Introduction, Get Started, Design Tokens, Contribution, Changelog, Recipes.
+- **Foundation** — Tokens: visual showcase (colors, typography, spacing, radius).
+- **Components** — Actions; Feedback; Forms; Layout; Navigation; Data; Typography. See Storybook for the full component list in each category.
+
+Build a static version:
 
 ```bash
 npm run build-storybook
