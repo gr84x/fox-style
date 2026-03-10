@@ -1,0 +1,10 @@
+# GR84X Private NPM Registry — example config
+# Copy to .npmrc and set your token (or use npm login).
+# Do not commit .npmrc if it contains secrets; .npmrc is in .gitignore.
+
+# Scope: resolve @gr84x packages from the private registry
+@gr84x:registry=https://npm.gr84x.com/
+
+# Auth: use env var so the token is not stored in the file
+# Set NPM_TOKEN before npm publish or npm install
+//npm.gr84x.com/:_authToken=${NPM_TOKEN}

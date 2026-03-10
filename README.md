@@ -9,6 +9,8 @@ Reusable component library and design tokens for Fox family UIs. Dark-first them
 
 ## Quick start
 
+**@gr84x/fox-style** is published to the [GR84X private npm registry](https://npm.gr84x.com/). Configure the `@gr84x` scope and authenticate before installing; see [Publishing and consumption](docs/publishing-and-consumption.md) for registry URL, auth, and consumer setup.
+
 ```bash
 npm install @gr84x/fox-style react react-dom
 ```
@@ -36,6 +38,7 @@ import { Badge, Button, ModeBanner } from '@gr84x/fox-style'
 
 ## Configuration
 
+- **Registry:** Package is published at `https://npm.gr84x.com/`. Consumers need `@gr84x:registry=https://npm.gr84x.com/` in `.npmrc` and auth to that registry. Full details: [docs/publishing-and-consumption.md](docs/publishing-and-consumption.md).
 - **Peer dependencies:** `react` and `react-dom` (>=18). Your app supplies them.
 - **CSS:** You must import both `theme.css` (tokens + base) and `components.css` (component classes) for components to render correctly.
 
@@ -90,6 +93,10 @@ npm run build-storybook
 ```
 
 Output is in `storybook-static/`.
+
+## Publishing
+
+The package is configured to publish to the GR84X private registry (`https://npm.gr84x.com/`). Maintainers: configure auth (see `.npmrc.example`), then `npm run build` and `npm publish`. Full steps and consumer setup: [docs/publishing-and-consumption.md](docs/publishing-and-consumption.md).
 
 ## Contribution
 

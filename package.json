@@ -22,8 +22,12 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "publishConfig": {
+    "registry": "https://npm.gr84x.com/"
+  },
   "scripts": {
     "build": "tsc && node scripts/copy-css.cjs",
+    "prepare": "npm run build",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
