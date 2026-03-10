@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { vi } from 'vitest'
 import { ToastProvider, useToast } from '@/components/Toast'
 
 function ToastTester() {
@@ -30,11 +31,16 @@ describe('Toast', () => {
   })
 
   it('useToast throws when used outside ToastProvider', () => {
-    function Bad() {
-      useToast()
-      return null
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+    try {
+      function Bad() {
+        useToast()
+        return null
+      }
+      expect(() => render(<Bad />)).toThrow('useToast must be used within ToastProvider')
+    } finally {
+      consoleSpy.mockRestore()
     }
-    expect(() => render(<Bad />)).toThrow('useToast must be used within ToastProvider')
   })
 
   it('addToast adds a toast visible in the notifications region', async () => {
