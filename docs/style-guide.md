@@ -60,7 +60,12 @@ Design tokens and component usage for **@gr84x/fox-style**. For a visual token r
 - **Accordion** — Expand/collapse sections. Purpose: only one (or a few) sections visible at a time. Use cases: FAQs, settings groups, filters/options panels, terms and conditions, multi-section forms.
 - **FormField** — Label, control slot, hint, error. Use to wrap Input, Select, Checkbox, etc.
 - **Input** — Text input; supports error state and className.
+- **TextArea** — Long-form multi-line text input; styled like Input, use with FormField.
 - **ImageUpload** — File input for images with preview and clear.
+- **ImageView** — Display-only image from URL or object URL; pairs with ImageUpload.
+- **VideoUpload** — File input for video with optional preview and clear.
+- **VideoViewer** — Play video from URL; native controls, optional poster.
+- **AudioPlayer** — Audio playback widget: play/pause, progress bar, time display. Optional: volume slider, playback speed (.5×–2×, configurable rates), skip forward/backward (configurable seconds).
 - **Checkbox** — Single checkbox with label; supports indeterminate.
 - **RadioGroup / Radio** — Group of radio options.
 - **Select** — Native select with options; supports FormField.
