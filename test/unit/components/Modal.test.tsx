@@ -55,6 +55,40 @@ describe('Modal', () => {
     expect(onClose).toHaveBeenCalledTimes(1)
   })
 
+  it('calls onClose when dialog backdrop is clicked', () => {
+    const onClose = vi.fn()
+    render(
+      <Modal open onClose={onClose}>
+        Body
+      </Modal>
+    )
+    const dialog = screen.getByRole('dialog')
+    fireEvent.click(dialog)
+    expect(onClose).toHaveBeenCalledTimes(1)
+  })
+
+  it('calls onClose when close button is clicked', () => {
+    const onClose = vi.fn()
+    render(
+      <Modal open onClose={onClose}>
+        Body
+      </Modal>
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Close dialog' }))
+    expect(onClose).toHaveBeenCalledTimes(1)
+  })
+
+  it('does not call onClose when modal panel content is clicked', () => {
+    const onClose = vi.fn()
+    render(
+      <Modal open onClose={onClose}>
+        Modal body content
+      </Modal>
+    )
+    fireEvent.click(screen.getByText('Modal body content'))
+    expect(onClose).not.toHaveBeenCalled()
+  })
+
   it('merges custom className on dialog', () => {
     render(
       <Modal open onClose={vi.fn()} className="my-modal">

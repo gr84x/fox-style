@@ -1041,20 +1041,33 @@
   background: rgba(0, 0, 0, 0.7);
 }
 .fs-modal-panel {
+  position: relative;
   background: var(--fs-bg-surface);
   border: 1px solid var(--fs-border-default);
-  border-radius: var(--fs-radius-lg);
+  border-radius: var(--fs-radius-md);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
   padding: 20px;
   max-width: 90vw;
   max-height: 90vh;
   overflow: auto;
 }
+.fs-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
 .fs-modal-title {
-  margin: 0 0 12px 0;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--fs-text-primary);
+}
+.fs-modal-close {
+  flex-shrink: 0;
+  margin-left: auto;
 }
 .fs-modal-body {
   margin-bottom: 16px;
